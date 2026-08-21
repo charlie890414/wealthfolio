@@ -11,12 +11,14 @@
     "cardDescription": "在您的所有設備之間安全地同步數據。",
     "connectToSync": "連接此設備以同步",
     "keepInSync": "讓您的設備保持同步",
-    "foundOtherDevices": "在您的賬戶上發現了其他已連接設備。繼續以連接此設備。",
+    "foundOtherDevices": "在您的帳戶上發現了其他已連接設備。繼續以連接此設備。",
     "encryptedInfo": "您的數據經過端到端加密。隻有您的設備才能讀取。",
     "morePreview": "+{{count}} 個",
-    "settingUp": "正在設置...",
+    "settingUp": "正在設定...",
     "connectThisDevice": "連接此設備",
-    "enableDeviceSync": "啟用設備同步"
+    "enableDeviceSync": "啟用設備同步",
+    "morePreview_one": "+{{count}} 個",
+    "morePreview_other": "+{{count}} 個"
   },
   "status": {
     "syncError": "同步錯誤",
@@ -24,7 +26,7 @@
     "synced": "已同步",
     "syncing": "同步中",
     "connected": "已連接",
-    "needsSetup": "需要設置",
+    "needsSetup": "需要設定",
     "revoked": "已撤銷",
     "notConnected": "未連接",
     "online": "在線",
@@ -33,7 +35,13 @@
     "hoursAgo": "{{count}}小時前",
     "daysAgo": "{{count}}天前",
     "thisDevice": "此設備",
-    "thisDeviceSuffix": "· 此設備"
+    "thisDeviceSuffix": "· 此設備",
+    "minutesAgo_one": "{{count}} 分鐘前",
+    "minutesAgo_other": "{{count}}分钟前",
+    "hoursAgo_one": "{{count}} 小時前",
+    "hoursAgo_other": "{{count}}小時前",
+    "daysAgo_one": "{{count}} 天前",
+    "daysAgo_other": "{{count}}天前"
   },
   "engine": {
     "pauseSync": "暫停同步",
@@ -46,12 +54,12 @@
   "errorState": {
     "failedToInitialize": "初始化設備同步失敗。",
     "initializationFailed": "初始化失敗",
-    "failedToLoadDevices": "加載設備失敗",
-    "tryRefreshing": "請嘗試刷新。"
+    "failedToLoadDevices": "載入設備失敗",
+    "tryRefreshing": "請嘗試重新整理。"
   },
   "stale": {
     "keysNeedUpdating": "密鑰需要更新",
-    "keysNeedUpdatingDescription": "另一臺設備上的安全設置已更改。請重新連接此設備以繼續同步。",
+    "keysNeedUpdatingDescription": "另一臺設備上的安全設定已更改。請重新連接此設備以繼續同步。",
     "updateThisDevice": "更新此設備"
   },
   "orphaned": {
@@ -78,17 +86,17 @@
     "disconnect": "斷開連接"
   },
   "waitingSnapshot": {
-    "otherDeviceFinishing": "您的另一臺設備仍在完成設置。",
-    "setupAlmostDone": "您的設置即將完成。",
+    "otherDeviceFinishing": "您的另一臺設備仍在完成設定。",
+    "setupAlmostDone": "您的設定即將完成。",
     "trustedHint": "您可以現在加快進度,或稍等,我們將在後臺自動繼續。",
-    "untrustedHint": "請先在您的另一臺已連接設備上完成設置。此頁面將自動更新。",
+    "untrustedHint": "請先在您的另一臺已連接設備上完成設定。此頁面將自動更新。",
     "checking": "正在檢查...",
     "checkAgain": "再次檢查",
     "preparing": "正在準備...",
-    "speedUpSetup": "加快設置"
+    "speedUpSetup": "加快設定"
   },
   "bootstrap": {
-    "inProgress": "同步引導進行中...",
+    "inProgress": "同步引導進列中...",
     "hasDataTitle": "此設備已有數據",
     "hasDataDescription": "為完成同步,此設備上的數據將被您另一臺設備的數據替換。",
     "continue": "繼續",
@@ -117,28 +125,28 @@
   "overwrite": {
     "replaceDataTitle": "替換此設備上的數據?",
     "replaceDataDescription": "您的本地數據將被您另一臺已連接設備的數據替換。",
-    "localRowsReplaced_one": "{{count}} 行本地數據將被替換。",
-    "localRowsReplaced_other": "{{count}} 行本地數據將被替換。",
+    "localRowsReplaced_one": "{{count}} 列本地數據將被替換。",
+    "localRowsReplaced_other": "{{count}} 列本地數據將被替換。",
     "notNow": "暫不",
     "syncing": "同步中...",
     "replaceAndSync": "替換並同步"
   },
   "reinit": {
-    "title": "從此設備重新設置同步?",
+    "title": "從此設備重新設定同步?",
     "description": "我們將保留此設備上的數據並用它來重新啟動同步。其他已連接設備可能需要重新連接。",
     "notNow": "暫不",
     "continue": "繼續"
   },
   "recovery": {
-    "title": "重新設置此設備",
-    "description": "此設備的同步已關閉。重新設置以在您的各設備間保持數據最新。",
+    "title": "重新設定此設備",
+    "description": "此設備的同步已關閉。重新設定以在您的各設備間保持數據最新。",
     "notNow": "暫不",
-    "settingUp": "正在設置...",
-    "setUpAgain": "重新設置此設備"
+    "settingUp": "正在設定...",
+    "setUpAgain": "重新設定此設備"
   },
   "disconnectDialog": {
     "title": "斷開此設備的連接?",
-    "description": "這將從此設備移除同步。您可以稍後重新設置。",
+    "description": "這將從此設備移除同步。您可以稍後重新設定。",
     "disconnecting": "正在斷開連接...",
     "disconnect": "斷開連接"
   },
@@ -146,7 +154,7 @@
     "titleLast": "取消配對您的最後一臺設備?",
     "title": "取消配對設備?",
     "descriptionLast": "這是您唯一已連接的設備。您需要重新連接一臺設備才能繼續同步您的數據。",
-    "description": "這將從您的賬戶中移除“{{name}}”。該設備需要重新連接才能同步數據。",
+    "description": "這將從您的帳戶中移除“{{name}}”。該設備需要重新連接才能同步數據。",
     "unpairing": "正在取消配對...",
     "unpair": "取消配對"
   },
@@ -167,7 +175,7 @@
     "starting": "正在啟動...",
     "generatingCode": "正在生成代碼...",
     "computingSecurityCode": "正在計算安全碼...",
-    "finishingSetup": "正在完成設置...",
+    "finishingSetup": "正在完成設定...",
     "finishingSetupDescription": "正在為新設備準備您的數據",
     "sessionExpired": "會話已過期",
     "connecting": "正在連接...",
@@ -204,6 +212,6 @@
     "tryAgain": "重試"
   },
   "errors": {
-    "backupPlatformUnsupported": "設備同步前的備份目前僅支持桌面端、網頁端和 iOS"
+    "backupPlatformUnsupported": "設備同步前的備份目前僅支援桌面端、網頁端和 iOS"
   }
 }

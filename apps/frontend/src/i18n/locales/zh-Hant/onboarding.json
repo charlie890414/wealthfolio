@@ -12,12 +12,12 @@
         "subtitle": "價值跟蹤",
         "badge": "最適合低維護的跟蹤。",
         "features": {
-          "netWorth": "淨資產與組態",
+          "netWorth": "淨資產與配置",
           "unrealizedPnl": "價值與未實現盈虧",
           "priceBased": "基於價格的業績",
-          "fastSetup": "快速輕量的設置"
+          "fastSetup": "快速輕量的設定"
         },
-        "limit": "限製：不支持基於交易的 TWR/IRR。",
+        "limit": "限製：不支援基於交易的 TWR/IRR。",
         "note": "註意：需要維護持倉/倉位。"
       },
       "transactions": {
@@ -26,18 +26,18 @@
         "badge": "最適合完整的業績分析。",
         "features": {
           "totalReturn": "長期總回報",
-          "attribution": "收益與現金流歸因",
+          "attribution": "報酬與現金流歸因",
           "completeView": "最完整的業績視圖",
-          "brokerSync": "最適合搭配券商同步或 CSV 導入"
+          "brokerSync": "最適合搭配券商同步或 CSV 匯入"
         },
         "limit": "限製：需要跟蹤所有交易。",
         "note": "註意：與券商同步後可自動完成。"
       },
-      "footnote": "您可以為不同賬戶使用不同的模式。",
+      "footnote": "您可以為不同帳戶使用不同的模式。",
       "learnMore": "了解更多"
     },
     "preferences": {
-      "subtitle": "隻需幾項偏好設置即可開始",
+      "subtitle": "隻需幾項偏好設定即可開始",
       "currencyLabel": "貨幣",
       "timezoneLabel": "時區",
       "other": "其他",
@@ -49,7 +49,10 @@
       "noTimezonesFound": "未找到時區",
       "currencyRequired": "請選擇一種基準貨幣。",
       "timezoneRequired": "請選擇一個時區。",
-      "languageLabel": "語言"
+      "languageLabel": "語言",
+      "formattingRegionLabel": "地區與格式",
+      "searchRegionsPlaceholder": "搜索地區……",
+      "noRegionsFound": "未找到地區"
     }
   },
   "appearance": {
@@ -81,7 +84,7 @@
     "features": {
       "brokerageSync": {
         "title": "券商同步",
-        "description": "自動將您的賬戶和交易同步到本地數據庫。"
+        "description": "自動將您的帳戶和交易同步到本地數據庫。"
       },
       "deviceSync": {
         "title": "設備同步",
@@ -89,7 +92,7 @@
       },
       "householdView": {
         "title": "家庭視圖",
-        "description": "與家人共享選定的賬戶，共同查看匯總視圖。"
+        "description": "與家人共享選定的帳戶，共同檢視匯總視圖。"
       }
     }
   }

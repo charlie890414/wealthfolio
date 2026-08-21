@@ -1,30 +1,30 @@
 {
   "insights": {
-    "loading_dashboard": "正在加載儀表盤……",
+    "loading_dashboard": "正在載入儀表板……",
     "tab_overview": "概覽",
     "tab_performance": "表現",
     "tab_income": "收入",
-    "back_to_allocation": "返回組態",
-    "target_allocation": "目標組態",
+    "back_to_allocation": "返回配置",
+    "target_allocation": "目標配置",
     "back_to_overview": "返回概覽",
     "rebalance": "再平衡",
     "no_target_selected": "未選擇目標",
-    "no_target_selected_description": "創建目標組態，以將當前權重與預期權重進行比較。",
-    "set_target_allocation": "設置目標組態",
+    "no_target_selected_description": "創建目標配置，以將當前權重與預期權重進列比較。",
+    "set_target_allocation": "設定目標配置",
     "chart_classes": "類別",
     "chart_regions": "地區",
-    "chart_sectors": "行業",
+    "chart_sectors": "列業",
     "explorer": {
-      "lens_allocation": "組態",
-      "lens_accounts": "賬戶",
-      "lens_sectors": "行業",
+      "lens_allocation": "配置",
+      "lens_accounts": "帳戶",
+      "lens_sectors": "列業",
       "lens_regions": "地區",
       "lens_risk": "風險",
       "lens_security": "證券類型",
       "lens_currency": "貨幣",
       "unit_categories": "個類別",
-      "unit_accounts": "個賬戶",
-      "unit_sectors": "個行業",
+      "unit_accounts": "個帳戶",
+      "unit_sectors": "個列業",
       "unit_regions": "個地區",
       "unit_levels": "個級別",
       "unit_types": "個類型",
@@ -37,7 +37,7 @@
       "show_all": "顯示全部"
     },
     "rails": {
-      "target_allocation": "目標組態",
+      "target_allocation": "目標配置",
       "details": "詳情",
       "suggested_moves": "建議操作",
       "all_in_range": "所有類別均在目標區間內——無需再平衡",
@@ -48,9 +48,11 @@
       "tolerance": "容差 {{tolerance}}",
       "current": "當前",
       "target": "目標",
-      "no_target_yet": "尚無目標組態",
-      "compare_weights": "將當前權重與您預期的投資組合進行比較。",
-      "set_target_allocation": "設置目標組態"
+      "no_target_yet": "尚無目標配置",
+      "compare_weights": "將當前權重與您預期的投資組合進列比較。",
+      "set_target_allocation": "設定目標配置",
+      "outside_range_one": "{{count}} 項超出範圍 · 最大差距 {{gap}}",
+      "outside_range_other": "{{count}} 項超出區間 · 最大偏差 {{gap}}"
     },
     "value_strip": {
       "portfolio_value": "投資組合價值",
@@ -62,18 +64,18 @@
       "available_cash": "可用現金",
       "holdings_count_one": "{{count}} 項持倉",
       "holdings_count_other": "{{count}} 項持倉",
-      "accounts_count_one": "{{count}} 個賬戶",
-      "accounts_count_other": "{{count}} 個賬戶"
+      "accounts_count_one": "{{count}} 個帳戶",
+      "accounts_count_other": "{{count}} 個帳戶"
     }
   },
   "networth": {
-    "failed_to_load": "加載淨資產失敗",
+    "failed_to_load": "載入淨資產失敗",
     "stale_valuations_tooltip": "陳舊估值（90 天以上）：",
     "days_ago": "{{count}} 天前",
     "no_history_data": "暫無可用的歷史數據",
     "breakdown": "明細",
     "no_assets_found": "未找到資產。",
-    "add_first_asset": "添加您的第一項資產",
+    "add_first_asset": "新增您的第一項資產",
     "update_valuations": "更新您的估值",
     "assets_count_one": "{{count}} 項資產",
     "assets_count_other": "{{count}} 項資產",
@@ -119,6 +121,8 @@
       "contributions": "投入",
       "equity_built": "累積權益",
       "per_month": "/月"
-    }
+    },
+    "days_ago_one": "{{count}} 天前",
+    "days_ago_other": "{{count}} 天前"
   }
 }

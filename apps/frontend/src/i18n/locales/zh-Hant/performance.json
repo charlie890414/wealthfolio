@@ -3,9 +3,9 @@
   "portfolio_performance": "投資組合表現",
   "performance_summary": "表現摘要",
   "all_portfolio": "全部投資組合",
-  "add_account": "添加賬戶",
-  "add_benchmark": "添加基準",
-  "add_item": "添加項目",
+  "add_account": "新增帳戶",
+  "add_benchmark": "新增基準",
+  "add_item": "新增項目",
   "calculating": "計算中……",
   "retry": "重試",
   "error_calculating": "計算表現數據時出錯",
@@ -21,8 +21,8 @@
   "total_return": "總回報",
   "total_return_percent": "總回報率 %",
   "annualized_return": "年化回報",
-  "time_weighted_return": "時間加權收益率",
-  "money_weighted_return": "資金加權收益率",
+  "time_weighted_return": "時間加權報酬率",
+  "money_weighted_return": "資金加權報酬率",
   "net_deposits": "淨存入",
   "net_withdrawals": "淨取出",
   "net_contributions": "淨投入",
@@ -45,11 +45,11 @@
   "chart_value": "投資組合價值",
   "chart_returns": "回報",
   "chart_contributions": "投入",
-  "chart_allocation": "組態",
+  "chart_allocation": "配置",
   "export_performance": "導出表現",
   "print_report": "打印報告",
   "no_performance_data": "暫無可用的表現數據",
-  "no_performance_data_desc": "向您的投資組合添加活動以查看表現指標。",
+  "no_performance_data_desc": "向您的投資組合新增活動以檢視表現指標。",
   "tracking_mode": {
     "mixed": "混合模式",
     "holdings": "持倉模式"
@@ -57,24 +57,24 @@
   "exclusion": {
     "no_data": "此選擇項無可用的表現數據。",
     "no_series": "此時間段無可用的圖表序列。",
-    "holdings_not_twr": "持倉模式賬戶使用價值回報，不以 TWR 繪製。",
-    "transaction_not_value": "交易模式賬戶使用 TWR，不以價值回報繪製。",
+    "holdings_not_twr": "持倉模式帳戶使用價值回報，不以 TWR 繪製。",
+    "transaction_not_value": "交易模式帳戶使用 TWR，不以價值回報繪製。",
     "no_overlap": "與所選項目無重疊的圖表日期。"
   },
   "comparison_notice": {
-    "different_methods": "不同的收益計算方法無法共用同一圖表。選擇灰顯的標籤以切換圖表模式。",
+    "different_methods": "不同的報酬計算方法無法共用同一圖表。選擇灰顯的標籤以切換圖表模式。",
     "not_enough_overlap": "這些所選項目與當前圖表沒有足夠重疊的圖表日期。",
     "not_plotted_count_one": "{{count}} 個所選項目未繪製",
     "not_plotted_count_other": "{{count}} 個所選項目未繪製"
   },
   "metric": {
     "return": "回報",
-    "time_weighted_return": "時間加權收益率",
+    "time_weighted_return": "時間加權報酬率",
     "time_weighted_short": "時間加權",
     "twr_short": "TWR",
     "annualized_twr": "年化 TWR",
     "ann_twr_short": "年化 TWR",
-    "money_weighted_return": "資金加權收益率",
+    "money_weighted_return": "資金加權報酬率",
     "money_weighted_short": "資金加權",
     "mwr_short": "MWR",
     "annualized_mwr": "年化 MWR",
@@ -93,7 +93,7 @@
     "annualized_return": "年化回報",
     "annualized_short": "年化",
     "gain_loss": "盈虧",
-    "gain_loss_info": "所選時間段內的總盈利或虧損。打開指標查看歸因詳情。"
+    "gain_loss_info": "所選時間段內的總盈利或虧損。打開指標檢視歸因詳情。"
   },
   "section": {
     "returns": "回報",
@@ -107,7 +107,7 @@
   },
   "empty": {
     "title": "暫無表現數據",
-    "description": "選擇賬戶以比較它們在一段時間內的表現。"
+    "description": "選擇帳戶以比較它們在一段時間內的表現。"
   },
   "attribution": {
     "title": "歸因",
@@ -126,12 +126,12 @@
     "fx_effect": "匯率影響",
     "fx_effect_desc": "貨幣兌換產生的盈虧",
     "fees": "費用",
-    "fees_desc": "交易傭金與賬戶費用",
+    "fees_desc": "交易傭金與帳戶費用",
     "taxes": "稅費",
     "taxes_desc": "收入的預扣稅",
     "contributions": "投入",
-    "contributions_desc": "您向賬戶添加的現金",
-    "distributions": "分配",
-    "distributions_desc": "從賬戶取出的現金"
+    "contributions_desc": "您向帳戶新增的現金",
+    "distributions": "指派",
+    "distributions_desc": "從帳戶取出的現金"
   }
 }

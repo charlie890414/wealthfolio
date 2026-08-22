@@ -33,7 +33,7 @@ i18n
     supportedLngs: SUPPORTED_LOCALE_CODES,
     nonExplicitSupportedLngs: true,
     // `load: "all"` loads every supported code (incl. regional
-    // variants like `zh-Hant`) so they resolve to their own locale
+    // variants like `zh-TW`) so they resolve to their own locale
     // folder instead of falling back to the base language.
     load: "all",
     ns: [...NAMESPACES],

@@ -1467,7 +1467,8 @@
       "mexico": "墨西哥",
       "china": "中國",
       "japan": "日本",
-      "southKorea": "韩國"
+      "southKorea": "韩國",
+      "taiwan": "台灣"
     }
   },
   "tax_categories_count_one": "{{count}} 個分類",

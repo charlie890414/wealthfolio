@@ -1,4 +1,17 @@
-import { de, enCA, enGB, enUS, es, fr, frCA, ja, ko, zhCN, type Locale } from "date-fns/locale";
+import {
+  de,
+  enCA,
+  enGB,
+  enUS,
+  es,
+  fr,
+  frCA,
+  ja,
+  ko,
+  zhCN,
+  zhTW,
+  type Locale,
+} from "date-fns/locale";
 import { useLocalizationSettings } from "../components/formatting-provider";
 
 const DATE_FNS_LOCALES: Record<string, Locale> = {
@@ -10,6 +23,7 @@ const DATE_FNS_LOCALES: Record<string, Locale> = {
   "de-DE": de,
   "es-ES": es,
   "zh-CN": zhCN,
+  "zh-TW": zhTW,
   "ja-JP": ja,
   "ko-KR": ko,
 };
@@ -33,6 +47,7 @@ const REGION_LOCALES: Record<string, Locale> = {
   ES: es,
   MX: es,
   CN: zhCN,
+  TW: zhTW,
   JP: ja,
   KR: ko,
 };

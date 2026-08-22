@@ -12,7 +12,7 @@ import itUi from "@/i18n/locales/it/ui.json";
 import jaUi from "@/i18n/locales/ja/ui.json";
 import koUi from "@/i18n/locales/ko/ui.json";
 import zhUi from "@/i18n/locales/zh/ui.json";
-import zhHantUi from "@/i18n/locales/zh-Hant/ui.json";
+import zhTwUi from "@/i18n/locales/zh-TW/ui.json";
 
 // The sandbox iframe renders `@wealthfolio/ui` components that call
 // `useTranslation()` against `ui:`-namespaced keys. The iframe is its own realm,
@@ -36,10 +36,10 @@ const resources: Record<LocaleCode, { ui: Record<string, unknown> }> = {
   ja: { ui: jaUi },
   ko: { ui: koUi },
   zh: { ui: zhUi },
-  "zh-Hant": { ui: zhHantUi },
+  "zh-TW": { ui: zhTwUi },
 };
 
-// Preserve supported regional codes (e.g. `zh-Hant`) and map other regional
+// Preserve supported regional codes (e.g. `zh-TW`) and map other regional
 // codes (e.g. `fr-CA`) to the base language, matching the host. Canonicalize
 // casing because i18next stores resource bundles case-sensitively.
 function normalizeLanguage(language: string) {

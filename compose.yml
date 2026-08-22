@@ -8,10 +8,7 @@
 
 services:
   wealthfolio:
-    # image: wealthfolio/wealthfolio:latest
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: charlie890414/wealthfolio:latest
     container_name: wealthfolio
     restart: unless-stopped
     ports:

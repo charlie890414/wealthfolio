@@ -12,6 +12,7 @@ import itUi from "@/i18n/locales/it/ui.json";
 import jaUi from "@/i18n/locales/ja/ui.json";
 import koUi from "@/i18n/locales/ko/ui.json";
 import zhUi from "@/i18n/locales/zh/ui.json";
+import zhHantUi from "@/i18n/locales/zh-Hant/ui.json";
 
 // The sandbox iframe renders `@wealthfolio/ui` components that call
 // `useTranslation()` against `ui:`-namespaced keys. The iframe is its own realm,
@@ -35,12 +36,19 @@ const resources: Record<LocaleCode, { ui: Record<string, unknown> }> = {
   ja: { ui: jaUi },
   ko: { ui: koUi },
   zh: { ui: zhUi },
+  "zh-Hant": { ui: zhHantUi },
 };
 
-// Map regional codes (e.g. `fr-CA`) to the base language, matching the host.
-// Lowercased: i18next stores resource bundles case-sensitively but resolves
-// lowercase codes, so an uppercase key would be stored yet never resolve.
+// Preserve supported regional codes (e.g. `zh-Hant`) and map other regional
+// codes (e.g. `fr-CA`) to the base language, matching the host. Canonicalize
+// casing because i18next stores resource bundles case-sensitively.
 function normalizeLanguage(language: string) {
+  const supportedLanguage = SUPPORTED_LOCALE_CODES.find(
+    (supported) => supported.toLowerCase() === language.toLowerCase(),
+  );
+  if (supportedLanguage) {
+    return supportedLanguage;
+  }
   return language.split("-")[0].toLowerCase();
 }
 
@@ -69,7 +77,7 @@ export function initSandboxI18n(language?: string) {
     lng: initialLanguage,
     fallbackLng: DEFAULT_LOCALE,
     supportedLngs: SUPPORTED_LOCALE_CODES,
-    load: "languageOnly",
+    load: "all",
     ns: ["ui"],
     defaultNS: "ui",
     resources,
@@ -153,7 +161,7 @@ export function installAddonTranslationRuntime(addonId: string) {
       if (!bundle) {
         continue;
       }
-      const normalized = normalizeLanguage(language);
+      const normalized = language.split("-")[0].toLowerCase();
       // Only plain base codes may reach i18next: addResourceBundle
       // reinterprets a dotted lng argument as a resource path, and anything
       // else would be stored under a key that never resolves.

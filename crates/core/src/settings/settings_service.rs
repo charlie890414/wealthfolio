@@ -41,9 +41,7 @@ fn validate_ui_language(language: &str) -> Result<String> {
 
 fn is_region_code(region: &str) -> bool {
     // `ZZ` is the BCP 47/CLDR unknown-region sentinel, not a display region.
-    region != "ZZ"
-        && region.len() == 2
-        && region.bytes().all(|byte| byte.is_ascii_uppercase())
+    region != "ZZ" && region.len() == 2 && region.bytes().all(|byte| byte.is_ascii_uppercase())
 }
 
 fn normalize_formatting_region(_language: &str, formatting_region: &str) -> String {

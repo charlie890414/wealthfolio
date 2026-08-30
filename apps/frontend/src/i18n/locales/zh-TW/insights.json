@@ -87,6 +87,7 @@
       "liabilities_label": "負債："
     },
     "breakdown_table": {
+      "new": "新增",
       "change_over": "{{period}} 內變化",
       "assets": "資產",
       "category": "類別",

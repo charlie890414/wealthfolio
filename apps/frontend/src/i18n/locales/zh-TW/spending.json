@@ -759,6 +759,7 @@
     "accountRequired": "請選擇一個帳戶。",
     "pickDate": "選擇日期",
     "amountPositive": "金額必須大於零。",
+    "amountNonNegative": "金額不得為負數。",
     "descDeposit": "存入此帳戶的資金",
     "descWithdrawal": "從此帳戶花費或支付的資金",
     "descInterest": "此帳戶所得的利息",

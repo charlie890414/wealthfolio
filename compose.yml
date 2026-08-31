@@ -8,7 +8,7 @@
 
 services:
   wealthfolio:
-    image: wealthfolio/wealthfolio:latest
+    image: charlie890414/wealthfolio:latest
     container_name: wealthfolio
     restart: unless-stopped
     ports:
@@ -38,7 +38,7 @@ services:
       WF_AUTH_PASSWORD_HASH: "${WF_AUTH_PASSWORD_HASH:-}"
       WF_AUTH_TOKEN_TTL_MINUTES: "${WF_AUTH_TOKEN_TTL_MINUTES:-60}"
       # Set to "false" to skip the auth requirement (e.g. reverse proxy handles auth)
-      # WF_AUTH_REQUIRED: "true"
+      WF_AUTH_REQUIRED: "false"
 
       # ── OIDC / SSO (optional) ─────────────────────────────────────────
       # Sign in via any OpenID Connect provider (Authentik, PocketID, Authelia, …).

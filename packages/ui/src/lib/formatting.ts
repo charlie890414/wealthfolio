@@ -37,20 +37,6 @@ export const FORMATTING_REGIONS = [
 
 export type FormattingRegionSetting = (typeof FORMATTING_REGIONS)[number];
 
-const FORMATTING_REGION_LOCALES: Record<Exclude<FormattingRegionSetting, "system">, string> = {
-  CA: "en-CA",
-  US: "en-US",
-  GB: "en-GB",
-  FR: "fr-FR",
-  DE: "de-DE",
-  ES: "es-ES",
-  MX: "es-MX",
-  CN: "zh-CN",
-  JP: "ja-JP",
-  KR: "ko-KR",
-  IT: "it-IT",
-  TW: "zh-TW",
-};
 export interface PercentFormatOptions {
   digits?: number;
   signDisplay?: "auto" | "always" | "exceptZero" | "never";
@@ -247,7 +233,10 @@ export function resolveFormattingLocale(
   }
   try {
     const region = setting.toUpperCase();
-    if (/^[A-Z]{2}$/.test(region)) {
+    if (/^[A-Z]{2}$/.test(setting)) {
+      if (!FORMATTING_REGIONS.includes(region as FormattingRegionSetting)) {
+        throw new Error(`Unsupported formatting region: ${setting}`);
+      }
       const maximized = new Intl.Locale("und", { region }).maximize();
       if (maximized.language === "und" || maximized.region !== region) {
         throw new Error(`Unsupported formatting region: ${setting}`);

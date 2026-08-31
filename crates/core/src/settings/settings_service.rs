@@ -7,13 +7,8 @@ use async_trait::async_trait;
 use log::{debug, error};
 use std::sync::Arc;
 
-const SUPPORTED_FORMATTING_REGIONS: &[&str] = &[
-    "system", "CA", "US", "GB", "FR", "DE", "ES", "MX", "CN", "JP", "KR", "TW", "IT",
-];
 const SYSTEM_FORMATTING_REGION: &str = "system";
-const SUPPORTED_UI_LANGUAGES: &[&str] = &[
-    "en", "fr", "de", "es", "zh", "zh-TW", "ja", "ko", "it",
-];
+const SUPPORTED_UI_LANGUAGES: &[&str] = &["en", "fr", "de", "es", "zh", "zh-TW", "ja", "ko", "it"];
 
 fn resolve_ui_language(language: &str) -> Option<&'static str> {
     SUPPORTED_UI_LANGUAGES

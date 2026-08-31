@@ -2,7 +2,8 @@
   "needs_review_alert": {
     "title_one": "{{count}} 筆活動需要檢查",
     "title_other": "{{count}} 筆活動需要檢查",
-    "description": "請確認每筆交易的資產、類型與最終金額。"
+    "description": "請確認每筆交易的資產、類型與最終金額。",
+    "action": "檢查"
   },
   "activities": "活動",
   "add_activity": "新增活動",

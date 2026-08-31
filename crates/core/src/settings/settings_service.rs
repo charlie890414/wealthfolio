@@ -7,34 +7,41 @@ use async_trait::async_trait;
 use log::{debug, error};
 use std::sync::Arc;
 
-const SUPPORTED_FORMATTING_REGIONS: &[&str] = &[
-    "system", "CA", "US", "GB", "FR", "DE", "ES", "MX", "CN", "JP", "KR", "IT",
-];
-const SUPPORTED_UI_LANGUAGES: &[&str] = &["en", "fr", "de", "es", "zh", "ja", "ko", "it"];
+const SYSTEM_FORMATTING_REGION: &str = "system";
+const SUPPORTED_UI_LANGUAGES: &[&str] = &["en", "fr", "de", "es", "zh", "zh-TW", "ja", "ko", "it"];
+
+fn resolve_ui_language(language: &str) -> Option<&'static str> {
+    SUPPORTED_UI_LANGUAGES
+        .iter()
+        .find(|supported| supported.eq_ignore_ascii_case(language))
+        .copied()
+        .or_else(|| {
+            let base = language.split(['-', '_']).next().unwrap_or(language);
+            SUPPORTED_UI_LANGUAGES
+                .iter()
+                .find(|supported| **supported == base)
+                .copied()
+        })
+}
 
 fn normalize_ui_language(language: &str) -> String {
-    let base = language.split(['-', '_']).next().unwrap_or(language);
-    if SUPPORTED_UI_LANGUAGES.contains(&base) {
-        base.to_string()
-    } else {
-        "en".to_string()
-    }
+    resolve_ui_language(language).unwrap_or("en").to_string()
 }
 
 fn validate_ui_language(language: &str) -> Result<String> {
-    let base = language.split(['-', '_']).next().unwrap_or(language);
-    if SUPPORTED_UI_LANGUAGES.contains(&base) {
-        Ok(base.to_string())
-    } else {
-        Err(Error::InvalidConfigValue(format!(
-            "Unsupported UI language: {language}"
-        )))
-    }
+    resolve_ui_language(language)
+        .map(str::to_string)
+        .ok_or_else(|| Error::InvalidConfigValue(format!("Unsupported UI language: {language}")))
+}
+
+fn is_region_code(region: &str) -> bool {
+    // `ZZ` is the BCP 47/CLDR unknown-region sentinel, not a display region.
+    region != "ZZ" && region.len() == 2 && region.bytes().all(|byte| byte.is_ascii_uppercase())
 }
 
 fn normalize_formatting_region(_language: &str, formatting_region: &str) -> String {
-    if formatting_region == "system" {
-        return "system".to_string();
+    if formatting_region.eq_ignore_ascii_case(SYSTEM_FORMATTING_REGION) {
+        return SYSTEM_FORMATTING_REGION.to_string();
     }
     let candidate = formatting_region
         .split(['-', '_'])
@@ -42,15 +49,15 @@ fn normalize_formatting_region(_language: &str, formatting_region: &str) -> Stri
         .find(|part| part.len() == 2)
         .unwrap_or(formatting_region)
         .to_ascii_uppercase();
-    if SUPPORTED_FORMATTING_REGIONS.contains(&candidate.as_str()) {
+    if is_region_code(&candidate) {
         candidate
     } else {
-        "system".to_string()
+        SYSTEM_FORMATTING_REGION.to_string()
     }
 }
 
 fn validate_formatting_region(region: &str) -> Result<()> {
-    if SUPPORTED_FORMATTING_REGIONS.contains(&region) {
+    if region == SYSTEM_FORMATTING_REGION || is_region_code(region) {
         Ok(())
     } else {
         Err(Error::InvalidConfigValue(format!(
@@ -230,6 +237,13 @@ mod tests {
     }
 
     #[test]
+    fn preserves_supported_regional_ui_language() {
+        assert_eq!(normalize_ui_language("zh-TW"), "zh-TW");
+        assert_eq!(normalize_ui_language("zh-tw"), "zh-TW");
+        assert_eq!(validate_ui_language("zh-TW").unwrap(), "zh-TW");
+    }
+
+    #[test]
     fn falls_back_when_a_persisted_ui_language_is_invalid() {
         assert_eq!(normalize_ui_language("foo_bar"), "en");
     }
@@ -256,6 +270,7 @@ mod tests {
         assert!(validate_formatting_region("JP").is_ok());
         assert!(validate_formatting_region("KR").is_ok());
         assert!(validate_formatting_region("IT").is_ok());
+        assert!(validate_formatting_region("TW").is_ok());
         assert!(validate_formatting_region("de-DE").is_err());
     }
 }

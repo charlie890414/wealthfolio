@@ -28,6 +28,7 @@ describe("locale formatting", () => {
     expect(resolveFormattingLocale("DE", "en")).toBe("de-DE");
     expect(resolveFormattingLocale("DE", "ja")).toBe("de-DE");
     expect(resolveFormattingLocale("en-US", "fr")).toBe("en-US");
+    expect(resolveFormattingLocale("TW", "en")).toBe("zh-TW");
   });
 
   it("preserves a language-only system locale", () => {

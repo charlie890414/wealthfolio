@@ -34,6 +34,7 @@ const FORMATTING_REGION_OPTIONS = [
   ["JP", "japan"],
   ["KR", "southKorea"],
   ["IT", "italy"],
+  ["TW", "taiwan"],
 ] as const;
 
 export function LanguageRegionSettings() {

@@ -1,0 +1,217 @@
+{
+  "section": {
+    "deviceSync": "設備同步",
+    "connectedDevices": "已連接設備",
+    "otherConnectedDevices": "其他已連接設備",
+    "manageDevices": "管理設備",
+    "options": "選項",
+    "deviceActions": "設備操作"
+  },
+  "setup": {
+    "cardDescription": "在您的所有設備之間安全地同步數據。",
+    "connectToSync": "連接此設備以同步",
+    "keepInSync": "讓您的設備保持同步",
+    "foundOtherDevices": "在您的帳戶上發現了其他已連接設備。繼續以連接此設備。",
+    "encryptedInfo": "您的數據經過端到端加密。隻有您的設備才能讀取。",
+    "morePreview": "+{{count}} 個",
+    "settingUp": "正在設定...",
+    "connectThisDevice": "連接此設備",
+    "enableDeviceSync": "啟用設備同步",
+    "morePreview_one": "+{{count}} 個",
+    "morePreview_other": "+{{count}} 個"
+  },
+  "status": {
+    "syncError": "同步錯誤",
+    "syncPaused": "同步已暫停",
+    "synced": "已同步",
+    "syncing": "同步中",
+    "connected": "已連接",
+    "needsSetup": "需要設定",
+    "revoked": "已撤銷",
+    "notConnected": "未連接",
+    "online": "在線",
+    "never": "從未",
+    "minutesAgo": "{{count}}分鐘前",
+    "hoursAgo": "{{count}}小時前",
+    "daysAgo": "{{count}}天前",
+    "thisDevice": "此設備",
+    "thisDeviceSuffix": "· 此設備",
+    "minutesAgo_one": "{{count}} 分鐘前",
+    "minutesAgo_other": "{{count}}分钟前",
+    "hoursAgo_one": "{{count}} 小時前",
+    "hoursAgo_other": "{{count}}小時前",
+    "daysAgo_one": "{{count}} 天前",
+    "daysAgo_other": "{{count}}天前"
+  },
+  "engine": {
+    "pauseSync": "暫停同步",
+    "resumeSync": "恢復同步",
+    "updating": "正在更新...",
+    "backgroundPaused": "後臺同步已暫停",
+    "backgroundResumed": "後臺同步已恢復",
+    "updateFailed": "更新後臺同步失敗"
+  },
+  "errorState": {
+    "failedToInitialize": "初始化設備同步失敗。",
+    "initializationFailed": "初始化失敗",
+    "failedToLoadDevices": "載入設備失敗",
+    "tryRefreshing": "請嘗試重新整理。"
+  },
+  "stale": {
+    "keysNeedUpdating": "密鑰需要更新",
+    "keysNeedUpdatingDescription": "另一臺設備上的安全設定已更改。請重新連接此設備以繼續同步。",
+    "updateThisDevice": "更新此設備"
+  },
+  "orphaned": {
+    "restoreTitle": "使用此設備恢復同步",
+    "restoreDescription": "沒有其他已連接設備可用。我們將使用此設備上已有的數據重新啟動同步。",
+    "confirmDescription": "我們將使用此設備上已有的數據重新啟動同步。",
+    "restarting": "正在重新啟動..."
+  },
+  "untrusted": {
+    "notConnectedYet": "此設備尚未連接",
+    "enterCodeFromDevices_one": "輸入您 {{count}} 臺其他已連接設備中某一臺上的代碼。",
+    "enterCodeFromDevices_other": "輸入您 {{count}} 臺其他已連接設備中某一臺上的代碼。",
+    "enterCodeGeneric": "輸入您其他已連接設備上的代碼以同步您的數據。",
+    "connectThisDevice": "連接此設備",
+    "connectToStartSyncing": "連接此設備以開始同步。"
+  },
+  "connect": {
+    "connectAnotherDevice": "連接另一臺設備",
+    "connectThisDevice": "連接此設備",
+    "pair": "配對",
+    "unpair": "取消配對",
+    "revoke": "撤銷",
+    "rename": "重命名",
+    "disconnect": "斷開連接"
+  },
+  "waitingSnapshot": {
+    "otherDeviceFinishing": "您的另一臺設備仍在完成設定。",
+    "setupAlmostDone": "您的設定即將完成。",
+    "trustedHint": "您可以現在加快進度,或稍等,我們將在後臺自動繼續。",
+    "untrustedHint": "請先在您的另一臺已連接設備上完成設定。此頁面將自動更新。",
+    "checking": "正在檢查...",
+    "checkAgain": "再次檢查",
+    "preparing": "正在準備...",
+    "speedUpSetup": "加快設定"
+  },
+  "bootstrap": {
+    "inProgress": "同步引導進列中...",
+    "hasDataTitle": "此設備已有數據",
+    "hasDataDescription": "為完成同步,此設備上的數據將被您另一臺設備的數據替換。",
+    "continue": "繼續",
+    "waitingOtherDeviceTitle": "正在等待您的另一臺設備",
+    "waitingOtherDeviceDescription": "一旦有新的快照可用,我們將完成同步。",
+    "retryStartedTitle": "同步重試已開始",
+    "retryStartedDescription": "正在檢查更新後的快照並應用待處理的同步更改。",
+    "couldNotRetryTitle": "無法重試同步",
+    "unableToContinueTitle": "無法繼續同步"
+  },
+  "snapshot": {
+    "uploadedTitle": "快照已上傳",
+    "uploadedDescription": "新連接的設備現在可以從此快照完成同步。",
+    "skippedTitle": "已跳過快照上傳",
+    "cancelledTitle": "快照上傳已取消",
+    "resultTitle": "快照上傳結果",
+    "failedTitle": "快照上傳失敗"
+  },
+  "backup": {
+    "savedTitle": "備份已儲存",
+    "savedDescription": "備份已儲存為 {{location}}。",
+    "failedTitle": "備份失敗",
+    "backingUp": "正在備份...",
+    "backUpFirst": "先備份"
+  },
+  "overwrite": {
+    "replaceDataTitle": "替換此設備上的數據?",
+    "replaceDataDescription": "您的本地數據將被您另一臺已連接設備的數據替換。",
+    "localRowsReplaced_one": "{{count}} 列本地數據將被替換。",
+    "localRowsReplaced_other": "{{count}} 列本地數據將被替換。",
+    "notNow": "暫不",
+    "syncing": "同步中...",
+    "replaceAndSync": "替換並同步"
+  },
+  "reinit": {
+    "title": "從此設備重新設定同步?",
+    "description": "我們將保留此設備上的數據並用它來重新啟動同步。其他已連接設備可能需要重新連接。",
+    "notNow": "暫不",
+    "continue": "繼續"
+  },
+  "recovery": {
+    "title": "重新設定此設備",
+    "description": "此設備的同步已關閉。重新設定以在您的各設備間保持數據最新。",
+    "notNow": "暫不",
+    "settingUp": "正在設定...",
+    "setUpAgain": "重新設定此設備"
+  },
+  "disconnectDialog": {
+    "title": "斷開此設備的連接?",
+    "description": "這將從此設備移除同步。您可以稍後重新設定。",
+    "disconnecting": "正在斷開連接...",
+    "disconnect": "斷開連接"
+  },
+  "unpairDialog": {
+    "titleLast": "取消配對您的最後一臺設備?",
+    "title": "取消配對設備?",
+    "descriptionLast": "這是您唯一已連接的設備。您需要重新連接一臺設備才能繼續同步您的數據。",
+    "description": "這將從您的帳戶中移除“{{name}}”。該設備需要重新連接才能同步數據。",
+    "unpairing": "正在取消配對...",
+    "unpair": "取消配對"
+  },
+  "toasts": {
+    "reinitFailed": "重新初始化同步失敗",
+    "disconnectFailed": "斷開連接失敗",
+    "unpairFailed": "取消配對設備失敗"
+  },
+  "pairing": {
+    "connectThisDeviceTitle": "連接此設備",
+    "enterCodeDescription": "輸入您其他已連接設備上的代碼",
+    "connectAnotherTitle": "連接另一臺設備",
+    "scanOrEnterDescription": "在您的另一臺設備上掃描或輸入此代碼",
+    "gettingReadyTitle": "正在準備此設備...",
+    "gettingReadyDescription": "這隻需片刻。",
+    "prepareFailed": "我們無法完成此設備的準備。",
+    "tryAgain": "重試",
+    "starting": "正在啟動...",
+    "generatingCode": "正在生成代碼...",
+    "computingSecurityCode": "正在計算安全碼...",
+    "finishingSetup": "正在完成設定...",
+    "finishingSetupDescription": "正在為新設備準備您的數據",
+    "sessionExpired": "會話已過期",
+    "connecting": "正在連接...",
+    "verifySecurityCode": "驗證安全碼",
+    "syncingData": "正在同步您的數據...",
+    "syncingDataDescription": "這可能需要幾秒鐘"
+  },
+  "displayCode": {
+    "expired": "已過期"
+  },
+  "enterCode": {
+    "openingCamera": "正在打開相機...",
+    "scanQrCode": "掃描二維碼",
+    "quickAndEasy": "快捷簡便",
+    "or": "或",
+    "codePlaceholder": "ABC 123",
+    "paste": "黏貼",
+    "connecting": "正在連接...",
+    "connect": "連接"
+  },
+  "sas": {
+    "sameCodeQuestion": "兩臺設備上的代碼相同嗎?"
+  },
+  "waiting": {
+    "waitingForConfirmation": "正在等待確認...",
+    "confirmCodeMatches": "確認此代碼與您另一臺設備上的代碼匹配",
+    "securelyConnecting": "請稍候,我們正在安全地連接您的設備"
+  },
+  "result": {
+    "allSet": "全部就緒!",
+    "connectedSuccessfully": "設備連接成功",
+    "done": "完成",
+    "connectionFailed": "連接失敗",
+    "tryAgain": "重試"
+  },
+  "errors": {
+    "backupPlatformUnsupported": "設備同步前的備份目前僅支援桌面端、網頁端和 iOS"
+  }
+}

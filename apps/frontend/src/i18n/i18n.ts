@@ -31,8 +31,11 @@ i18n
     lng: getCachedLanguage(),
     fallbackLng: DEFAULT_LOCALE,
     supportedLngs: SUPPORTED_LOCALE_CODES,
-    // Map regional codes (e.g. `fr-CA`) to the base language.
-    load: "languageOnly",
+    nonExplicitSupportedLngs: true,
+    // `load: "all"` loads every supported code (incl. regional
+    // variants like `zh-TW`) so they resolve to their own locale
+    // folder instead of falling back to the base language.
+    load: "all",
     ns: [...NAMESPACES],
     defaultNS: DEFAULT_NAMESPACE,
     interpolation: {

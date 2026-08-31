@@ -74,6 +74,7 @@ const formattingRegions = [
   ["JP", "japan"],
   ["KR", "southKorea"],
   ["IT", "italy"],
+  ["TW", "taiwan"],
 ] as const;
 
 const popularFormattingRegions = ["system", "US", "CA", "GB"];

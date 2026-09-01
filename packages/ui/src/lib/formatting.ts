@@ -694,6 +694,7 @@ export function createAmountFormatting(
   const priceCurrencyFormatters = new Map<string, Intl.NumberFormat>();
   const getCurrencyFractionDigits = (currency: string) => {
     const normalizedCurrency = currency?.toUpperCase?.() || "USD";
+    if (normalizedCurrency === "TWD") return 0;
     const cached = currencyFractionDigitsCache.get(normalizedCurrency);
     if (cached !== undefined) return cached;
     try {
